@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url(./fonts/HelveticaNeueBold.otf);
+}
+
+@font-face {
+    font-family: 'Apple';
+    src: url(./fonts/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Google';
+    src: url(./fonts/Product\ Sans\ Regular.ttf);
+}
+
 
 *{
     padding: 0;
@@ -211,6 +226,246 @@ footer #x-corp{
     margin-top: 0.6rem;
 }
 
+
+.logingroup{
+    background-color: rgba(81, 99, 114, 0.4);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column; /* Melhora a organização */
+    align-items: center;
+    width: 37.5rem;
+    height: 40.6rem;
+    background: #000;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+}
+
+.icons-topo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0.6rem;
+    padding: 0 0.5rem;
+}
+
+.icons-topo #logo {
+    margin-left: 15rem;
+}
+
+.icons-topo #close {
+    color: #E7E9EA;
+    font-size: 20px;
+    padding: 6.8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.icons-topo #close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.login h2 {
+    color: #E7E9EA;
+    font-size: 30px;
+    font-family: 'TwitterChirp';
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 9rem;
+}
+
+.login .btns-login {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 1.3rem; /* Espaçamento entre os botões */
+    width: 100%;
+    align-items: center;
+}
+
+.login .btns-login button{
+    height: 2.5rem;
+    width: 98%;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+}
+
+.login .btns-login #google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Google';
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-left: 0.7rem;
+    gap: 7px;
+    color: #555555;
+}
+
+.login .btns-login #apple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Apple';
+    font-size: 15px;
+    color: #242424;
+    gap: 7px;
+    transition: .3s ease;
+}
+
+.login .btns-login #apple:hover{
+    background: #e9e9e9;
+}
+
+.login .-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100;
+    color: #fff;
+}
+
+.login .-input p{
+    color: #E7E9EA;
+    font-size: 17px;
+    margin-bottom: 1rem;
+}
+
+.login .-input p::after,
+.login .-input p::before{
+    content: '';
+    position: absolute;
+    background-color: #474747;
+    width: 20%;
+    height: 0.01rem;
+    top: 41.9%;
+    left: 37.5%;
+    transform: translate(-55%, -55%);
+}
+
+.login .-input p::after{
+    left: 64.7%;
+}
+
+.login .-input input{
+    width: 98%;
+    height: 3.8rem;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding-top: 1rem;
+    font-size: 15px;
+    padding-left: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #474747;
+    cursor: default;
+}
+
+.login .-input input:focus{
+    outline: 2px solid #0199ff;
+}
+
+
+.login .-input label{
+    position: absolute;
+    top: 49%;
+    right: 27%;
+    transform: rotateY(-50%);
+    font-size: 17px;
+    color: #838383;
+    transition: .3s ease;
+    cursor: text;
+}
+
+.login .-input input:focus ~ label,
+.login .-input input:valid ~ label{
+    top: 47.4%;
+    right: 37.3%;
+    color: #0294f5;
+    font-size: 13.4px;
+}
+
+.login .enter{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.login .enter button{
+    height: 2.2rem;
+    border-radius: 25px;
+    border: none;
+    font-size: 14px;
+    color: #161616;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    cursor: pointer;
+}
+
+.login .enter #entrar{
+    background: #fff;
+    transition-duration: 0.2s;
+}
+
+.login .enter #esqueceu{
+    background: transparent;
+    color: rgb(239,243,244);
+    border: 1px solid rgb(83, 100, 113);
+    transition-duration: 0.2s;
+}
+
+.login .enter #entrar:hover{
+    background: #e7e7e7;
+}
+
+.login .enter #esqueceu:hover{
+    background: rgba(83, 100, 113, 0.2);
+}
+
+.login .enter p{
+    margin-top: 1.4rem;
+    color: rgb(113, 118, 123);
+    font-size: 15px;
+}
+
+.login .enter a{
+    text-decoration: none;
+    margin-left: 0.2rem;
+    font-size: 15px;
+    color: rgb(29, 155, 240);
+}
+
+.login .enter a:hover{
+    text-decoration: underline;
+}
+
+
+
 @media only screen and (max-width: 950px){
 
     .container{
@@ -242,7 +497,7 @@ footer #x-corp{
         justify-content: center;
         flex-direction: column;
         position: relative;
-        right: 24rem;
+        right: 23.8rem;
         top: 17rem;
     }
 
@@ -253,6 +508,52 @@ footer #x-corp{
         margin-right: 6rem;
     }
 
+
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
+    .logingroup{
+        background-color: #000;
+        width: auto;
+        height: 100vh;
+    }
+ 
+
+    .form-login .icons-topo{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: auto;
+    }
+
+    .form-login .icons-topo #logo{
+        margin-right: 17rem;
+    }
+
+    .form-login .icons-topo #close{
+        width: fit-content;
+        height: auto;
+        position: relative;
+        left: 5.6rem;
+    }
+
+    .form-login .login{
+        margin-top: 2rem;
+    }
+
+    .form-login .-input label{
+        margin-top: 2rem;
+    }
+
+    .login .-input p::before{
+        top: 47.2%;
+    }
+
+    .login .-input p::after{
+        top: 47.2%;
+    }
+}
+
+
+

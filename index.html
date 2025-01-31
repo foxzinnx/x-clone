@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter.3.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>X. O que está acontecendo / X</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -32,9 +45,7 @@
 
                 <div class="entrar">
                     <h2>Já tem uma conta?</h2>
-                    <a href="./login.html">
-                    <button id="enter">Entrar</button>
-                    </a>
+                    <button id="enter" onclick="entrar()">Entrar</button>
                 </div>
             </div>
         </main>
@@ -59,5 +70,37 @@
             <a href="#" id="x-corp">© 2025 X Corp.</a>
         </footer>
     </div>
+</body>
+</html>
+
+    <div class="logingroup" id="logingroup">
+        <div class="form-login">
+            <div class="icons-topo">
+                <span id="close" class="material-icons">
+                    close
+                    </span>
+                <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="" height="31px">
+            </div>
+            <div class="login">
+                <h2>Entrar no X</h2>
+                <div class="btns-login">
+                    <button id="google"><img src="https://img.icons8.com/?size=512&id=17949&format=png" alt="" height="20px">Fazer login com o Google</button>
+                    <button id="apple"><img src="https://logodownload.org/wp-content/uploads/2013/12/apple-logo-1-2.png" alt="" height="20px" >Entrar com Apple</button>
+                </div>
+                <div class="-input">
+                    <p>ou</p>
+                    <input type="text" id="user" autocomplete="off" maxlength="35" required>
+                    <label for="user">Celular, e-mail ou nome de usuário</label>
+                </div>
+
+                <div class="enter">
+                    <button id="entrar">Avançar</button>
+                    <button id="esqueceu">Esqueçeu sua senha?</button>
+                    <p>Não tem uma conta?<a href="#">Inscreva-se</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js" defer></script>
 </body>
 </html>
